@@ -25,10 +25,12 @@ router.get('/all',(req,res)=>{
 router.post('/new',(req,res)=>{
     var name = req.body.name;
     var salary = req.body.salary;
-    var skill = req.body.skill;
+    var Mongodb = req.body.Mongodb;
+    var Node = req.body.Node;
+    var Express = req.body.Express;
     var dob = req.body.dob;
-   
-    var new_employee = new Employee({name:name,salary:salary,skill:skill,dob:dob});
+    var image = req.body.image;
+    var new_employee = new Employee({name:name,salary:salary,dob:dob,Mongodb:Mongodb,Node:Node,Express:Express,image:image});
     new_employee.save((err,emp)=>{
         if(err)
         {
@@ -73,8 +75,11 @@ router.put('/edit', (req,res)=>{
         {
             foundemp.name = req.body.name;
             foundemp.salary = req.body.salary;
-            foundemp.skill = req.body.skill;
+            foundemp.Express = req.body.Express;
+            foundemp.Mongodb = req.body.Mongodb;
+            foundemp.Node = req.body.Node;
             foundemp.dob = req.body.dob;
+            foundemp.image = req.body.image;
             foundemp.save((err,emp)=>{
                 if(err)
                 {

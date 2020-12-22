@@ -27,7 +27,7 @@ app.use(methodoverride("_method"));
 
 const mongoose = require('mongoose');
 const { Db } = require('mongodb');
-mongoose.connect('mongodb://localhost:27017/employee', {
+mongoose.connect('mongodb://localhost:27017/employee_DB_v1', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })

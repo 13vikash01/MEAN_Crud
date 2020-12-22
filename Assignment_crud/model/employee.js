@@ -12,9 +12,18 @@ const EmployeeSchema=new mongoose.Schema({
      dob :{
         type: String,
      },
-     skill:{
-         type:String
-     }
+     Mongodb:{
+         type:Number
+     },
+     Express:{
+        type:Number
+    },
+    Node:{
+        type:Number
+    },
+    image:{
+        type:String
+    }
 })
 
 
